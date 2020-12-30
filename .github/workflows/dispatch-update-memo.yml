@@ -14,9 +14,7 @@ jobs:
           node-version: 14
       # Update Memo
       - name: Update Memo
-        run: |
-          echo "${{ github.event.repository.private }}"
-          yarn install && yarn ts-node index.ts
+        run: yarn install && yarn ts-node index.ts
         env:
           PAYLOAD: ${{ toJSON(github.event.client_payload) }}
           UPDATE_MARKDOWN: true
