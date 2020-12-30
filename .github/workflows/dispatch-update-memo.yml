@@ -1,0 +1,50 @@
+name: Dispatch Update Memo
+on:
+  repository_dispatch:
+    types: [update-memo]
+jobs:
+  update-memo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      # Update Memo
+      - name: Update Memo
+        run: yarn install && yarn ts-node index.ts
+        env:
+          PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+          UPDATE_MARKDOWN: true
+        working-directory: actions/update-memo
+      - name: Commit Memo
+        uses: EndBug/add-and-commit@v6
+        with:
+          message: "Update Memo"
+          add: 'data/'
+          push: true
+      # Create draft and create pull request
+      - name: Create Draft Post
+        run: yarn install && yarn ts-node index.ts
+        env:
+          PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+          PRIVATE: false
+        working-directory: actions/create-draft-post
+      - name: Create Draft Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: Draft Post
+          branch: draft
+          delete-branch: true
+          title: "Draft Post"
+          body: |
+            - [ ] Write Headline
+          labels: |
+            Type:Post
+          draft: true
+      - name: Check Draft Post PR
+        run: |
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"

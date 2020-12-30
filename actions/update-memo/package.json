@@ -1,0 +1,23 @@
+{
+  "name": "@hubmemo/update-memo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node-transpile-only index.ts",
+    "build": "tsc",
+    "test": "npm run build"
+  },
+  "keywords": [],
+  "author": "azu",
+  "license": "MIT",
+  "dependencies": {
+    "korefile": "^2.1.0",
+    "asocial-bookmark": "^1.5.1",
+    "markdown-escape": "^1.1.0"
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}

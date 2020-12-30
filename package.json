@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "hubmemo",
+  "version": "1.0.0",
+  "description": "Private/Public Memo system based on GitHub.",
+  "keywords": [
+    "github",
+    "memo",
+    "note",
+    "actions"
+  ],
+  "homepage": "https://github.com/azu/hubmemo",
+  "bugs": {
+    "url": "https://github.com/azu/hubmemo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/hubmemo.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "scripts": {
+    "pull-template": "git remote set-url template git@github.com:azu/hubmemo.git && git fetch --all && git merge --allow-unrelated-histories template/master"
+  }
+}
