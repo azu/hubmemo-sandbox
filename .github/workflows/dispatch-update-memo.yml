@@ -15,7 +15,7 @@ jobs:
       # Update Memo
       - name: Update Memo
         run: |
-          echo "${{ toJSON(github.event.client_payload) }}"
+          echo "${{ toJSON(github) }}"
           yarn install && yarn ts-node index.ts
         env:
           PAYLOAD: ${{ toJSON(github.event.client_payload) }}
