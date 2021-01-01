@@ -1,0 +1,15 @@
+{
+    "item": {
+        "title": "img 2 example",
+        "url": "https://example.com/img2",
+        "content": "img desc for example!?!?",
+        "tags": [
+            "example"
+        ],
+        "media": [
+            {
+                "relativeFilePath": "./face.png"
+            }
+        ]
+    }
+}
