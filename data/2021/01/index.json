@@ -31,13 +31,13 @@
     },
     {
         "private": false,
-        "title": "New Example title",
+        "title": "New Example Memo",
         "content": "This is a nice example site.\r\nThis memo is created in the issue.",
         "url": "https://example.com/",
         "tags": [
             "example"
         ],
-        "date": "2021-01-02T06:44:09.522Z",
+        "date": "2021-01-02T06:44:35.958Z",
         "viaURL": "https://github.com/azu/hubmemo-sandbox/issues/4",
         "media": [],
         "relatedItems": []

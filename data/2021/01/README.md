@@ -14,7 +14,7 @@ img desc for example!?!?
 
 ----
 
-## [New Example title](https://example.com/)
+## [New Example Memo](https://example.com/)
 
 This is a nice example site.
 This memo is created in the issue.
