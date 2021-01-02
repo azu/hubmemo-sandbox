@@ -1,10 +1,22 @@
-name: Watch Folder Update Memo
-# If add json in watch-folder/update-memo/, update it as memo
+name: Manual Update Memo
 on:
-  push:
-    paths:
-      - 'watch-folder/update-memo/*.json'
-
+  workflow_dispatch:
+    inputs:
+      private:
+        description: "true or false"
+        required: true
+        default: 'false'
+      url:
+        description: "URL",
+        default: "",
+      title:
+        description: "Title",
+        default: "",
+      content:
+        description: "Description(Markdown)",
+        required: true
+      tags:
+        description: "Tags(comma, separated)"
 jobs:
   update-memo:
     runs-on: ubuntu-18.04
@@ -17,9 +29,11 @@ jobs:
           node-version: 14
       # Update Memo
       - name: Update Memo
-        run: cd actions/update-memo && yarn install && yarn ts-node-transpile-only watch-folder-index.ts
+        run: yarn install && yarn ts-node-transpile-only manul-index.ts
         env:
+          PAYLOAD: ${{ toJson(github.event.inputs)
           UPDATE_MARKDOWN: true
+        working-directory: actions/update-memo
       - name: Commit Memo
         uses: EndBug/add-and-commit@v6
         with:
