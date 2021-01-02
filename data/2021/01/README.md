@@ -14,7 +14,7 @@ img desc for example!?!?
 
 ----
 
-## [New Example](https://example.com/)
+## [New Example title](https://example.com/)
 
 https://example.com/
 
