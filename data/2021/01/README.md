@@ -1,6 +1,6 @@
 ## [img example](https://example.com/img)
 
-img desc for example!?!?        
+img desc for example!?!?
 
 ![](img/github-mark.png)
 
@@ -8,6 +8,12 @@ img desc for example!?!?
 
 ## [img 2 example](https://example.com/img2)
 
-img desc for example!?!?        
+img desc for example!?!?
 
 ![](img/face.png)
+
+----
+
+## [Example Title](https://example.com/)
+
+**Markdown** TEST
