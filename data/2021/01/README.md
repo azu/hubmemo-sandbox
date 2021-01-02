@@ -16,12 +16,5 @@ img desc for example!?!?
 
 ## [New Example title](https://example.com/)
 
-https://example.com/
-
 This is a nice example site.
 This memo is created in the issue.
-
-UPDATE OK!?!?!?
-
-new single issue!!
-

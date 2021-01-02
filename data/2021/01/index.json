@@ -32,12 +32,12 @@
     {
         "private": false,
         "title": "New Example title",
-        "content": "https://example.com/\r\n\r\nThis is a nice example site.\r\nThis memo is created in the issue.\r\n\r\nUPDATE OK!?!?!?\r\n\r\nnew single issue!!\r\n",
+        "content": "This is a nice example site.\r\nThis memo is created in the issue.",
         "url": "https://example.com/",
         "tags": [
             "example"
         ],
-        "date": "2021-01-02T06:01:28.687Z",
+        "date": "2021-01-02T06:44:09.522Z",
         "viaURL": "https://github.com/azu/hubmemo-sandbox/issues/4",
         "media": [],
         "relatedItems": []
