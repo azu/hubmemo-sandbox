@@ -41,5 +41,16 @@
         "viaURL": "https://github.com/azu/hubmemo-sandbox/issues/4",
         "media": [],
         "relatedItems": []
+    },
+    {
+        "private": false,
+        "title": "Image Example memo",
+        "content": "HubMemo support Image!\r\n\r\n![1603191466361](https://user-images.githubusercontent.com/19714/103452355-caf88700-4d11-11eb-89e4-5d11a5aab447.jpg)",
+        "url": "https://example.com/img-memo",
+        "tags": [],
+        "date": "2021-01-02T07:10:21.033Z",
+        "viaURL": "https://github.com/azu/hubmemo-sandbox/issues/6",
+        "media": [],
+        "relatedItems": []
     }
 ]
