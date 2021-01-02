@@ -5,39 +5,9 @@ This guide describes about "Memo" and "Post".
 - Memo: It is a collection of snippet data
 - Post: It is an article for publishing
 
-## Memo Structure
-
-HubMemo represent a memo as JSON object for machine-readable.
-
-```ts
-type Memo = {
-  // unique key
-  url: string;
-  private: boolean,
-  title: string;
-  content: string;
-  tags: string[];
-  date: string;
-  viaURL?: string;
-  relatedItems?: { title: string, url: string }[];
-  media: { url: string }[];
-}
-```
-
-Also, HubMemo create a memo as Markdown for human-readable in same directory of JSON.
-
-```markdown
-## [{title}]({url})
-
-{content}
-
-{media}
-{relatedItems}
-```
+Hubmemo use GitHub Actions for updating flow.
 
 ## Update Memo
-
-HubMemo use GitHub Actions for updating flow.
 
 ### Via HTTP API
 
@@ -68,7 +38,7 @@ curl -vv \
 
 ### Via Git
 
-[watch-folder-update-memo.yml](../.github/workflows/watch-folder-update-memo.yml) Action create a memo from json file if you add the json file to `watch_folder/update-memo/` directory.
+[watch-folder-update-memo.yml](../.github/workflows/watch-folder-update-memo.yml) Action create memo from json file if you add the json file to `watch_folder/update-memo/` directory.
 
 ```shell
 echo '{"item":{"title":"example","url":"https://example.com","content":"description for example","tags":["example"]}}' > watch_folder/update-memo/example.json
@@ -81,7 +51,7 @@ For more details, see [Watch Folder](../watch-folder) documentation.
 
 ### Via GUI
 
-[manual-update-memo.yml](../.github/workflows/watch-folder-update-memo.yml) provide simple GUI for creating a memo.
+You can use GUI using [manual-update-memo.yml](../.github/workflows/watch-folder-update-memo.yml).
 
 1. Visit <https://github.com/<username>/<repo>/actions?query=workflow%3A%22Manual+Update+Memo%22>
 2. Click "Run workflow"
@@ -91,31 +61,20 @@ For more details, see [Watch Folder](../watch-folder) documentation.
 
 ### Via Issue
 
-[issue-update-memo.yml](../.github/workflows/issue-update-memo.yml) Action create  a memo from GitHub issue.
+[issue-update-memo.yml](../.github/workflows/issue-update-memo.yml) Action create memo from GitHub issue.
 
 1. New Issue
 2. Click "New Memo" template
 3. Create an issue, and then [issue-update-memo.yml](../.github/workflows/issue-update-memo.yml) Action create memo from the issue.
 
-Mapping memo with Issue.
+Mapping memo with Issue
 
 - `title`: Issue Title
-- `url`: First `http://` url in Issue body
-  - Issue body should start with `<url>` or `url` link.
-- `content`: Rest content of Issue body
-- `tags`: Issue's label starts `Tag:???`
-  - If the issue labeled with `Tag:example`, convert it to `tags: ["example"]` 
-- `private`: If the issue labeled with `Type:Private`, it to be `true`
+- `url`: Issue body first http url
+    - `<url>` or `url`
+- `content`: 
 
-Issue body should be following:
 
-```
-<https://example.com>
-
-Description of example.com
-```
-
-:memo: `<https://...>` is markdown link syntax.
 
 Tips: `title` and `body`  parameter as placeholder.
 
@@ -132,7 +91,7 @@ Example: [New Example title · Issue #4 · azu/hubmemo-sandbox](https://github.c
 3. Merge it!
 4. Automatically publish this content to [your setup provider](./SETUP.md)
 
-HubMemo help you to edit Draft PR via [`.github/workflows/update-draft-post.yml`](../.github/workflows/update-draft-post.yml).
+Hubmemo help you to edit Draft PR via [`.github/workflows/update-draft-post.yml`](../.github/workflows/update-draft-post.yml).
 
 - if PR title starts `YYYY-MM-DD: ~`, change the `draft.md` to `YYYY-MM-DD-<slug>.md`
 - if the content's `title: ~` starts with `YYYY-MM-DD: ~`, change the `draft.md` to `YYYY-MM-DD-<slug>.md`
