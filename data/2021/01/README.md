@@ -27,3 +27,10 @@ This memo is created in the issue.
 HubMemo support Image!
 
 ![1603191466361](https://user-images.githubusercontent.com/19714/103452355-caf88700-4d11-11eb-89e4-5d11a5aab447.jpg)
+
+
+----
+
+## [JSer.info and HubMemo](https://jser.info)
+
+HubMemo is based on [jser/jser.info](https://github.com/jser/jser.info "jser/jser.info") implementation!

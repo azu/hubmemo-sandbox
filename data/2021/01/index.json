@@ -52,5 +52,16 @@
         "viaURL": "https://github.com/azu/hubmemo-sandbox/issues/6",
         "media": [],
         "relatedItems": []
+    },
+    {
+        "private": false,
+        "title": "JSer.info and HubMemo",
+        "content": "HubMemo is based on [jser/jser.info](https://github.com/jser/jser.info \"jser/jser.info\") implementation!",
+        "url": "https://jser.info",
+        "tags": [],
+        "date": "2021-01-15T15:30:35.891Z",
+        "viaURL": "https://github.com/azu/hubmemo-sandbox/issues/7",
+        "media": [],
+        "relatedItems": []
     }
 ]
