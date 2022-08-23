@@ -6,7 +6,7 @@ on:
 
 jobs:
   update-memo:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     if: contains(github.event.issue.labels.*.name, 'Type:Memo')
     steps:
       - name: checkout
